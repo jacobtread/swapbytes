@@ -1,0 +1,23 @@
+[workspace]
+members = [".", "./swapbytes-derive"]
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+authors = ["Jacobtread <jacobtread@gmail.com>"]
+repository = "https://github.com/jacobtread/bytereorder"
+readme = "README.md"
+
+[package]
+name = "swapbytes"
+version = "0.1.0"
+description = "Crate for swapping the endianess of structures"
+
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+readme.workspace = true
+
+[dependencies]
+swapbytes-derive = { version = "0.1", path = "./swapbytes-derive" }

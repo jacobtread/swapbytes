@@ -1,0 +1,19 @@
+[package]
+name = "swapbytes-derive"
+version = "0.1.1"
+description = "Derive macros for working with the swapbytes crate"
+
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+readme.workspace = true
+
+[dependencies]
+darling = "0.20"
+quote = "1"
+syn = "2"
+proc-macro2 = "1"
+
+[lib]
+proc-macro = true
