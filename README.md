@@ -12,7 +12,7 @@ Using `swapbytes` with cargo
 
 ```toml
 [dependencies]
-swapbytes = "0.1"
+swapbytes = "0.2"
 ```
 or 
 
@@ -35,5 +35,14 @@ pub struct Test {
 
 let mut value: Test = Test { a: 1, b: 4 };
 value.swap_bytes_mut();
+
+
+/* Enum must implement Clone, Copy */
+#[derive(SwapBytes, Clone, Copy)]
+#[repr(u32)] /* Only number repr types are supported */
+pub enum ReprEnum {
+    A = 1,
+    B = 2
+}
 
 ```
