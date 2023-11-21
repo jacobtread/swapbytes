@@ -26,6 +26,10 @@ impl SwapBytes for () {
     fn swap_bytes_mut(&mut self) {}
 }
 
+impl SwapBytes for bool {
+    fn swap_bytes_mut(&mut self) {}
+}
+
 impl SwapBytes for f32 {
     fn swap_bytes_mut(&mut self) {
         let mut bytes: [u8; 4] = self.to_ne_bytes();
