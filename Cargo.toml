@@ -10,7 +10,7 @@ readme = "README.md"
 
 [package]
 name = "swapbytes"
-version = "0.1.1"
+version = "0.2.0"
 description = "Crate for swapping the endianess of structures"
 
 edition.workspace = true
@@ -20,4 +20,4 @@ repository.workspace = true
 readme.workspace = true
 
 [dependencies]
-swapbytes-derive = { version = "0.1", path = "./swapbytes-derive" }
+swapbytes-derive = { version = "0.2", path = "./swapbytes-derive" }

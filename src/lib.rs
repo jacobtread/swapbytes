@@ -1,7 +1,8 @@
 pub use swapbytes_derive::*;
 
-/// Trait implement by fields that can swap their byte ordering
+/// Trait implement by things that can swap their byte ordering
 pub trait SwapBytes {
+    /// Swaps the byte ordering of a value in-place
     fn swap_bytes_mut(&mut self);
 }
 
@@ -22,10 +23,12 @@ macro_rules! impl_endian_swap_int {
 
 impl_endian_swap_int![i8, u8, i16, u16, i32, u32, i64, u64, isize, usize];
 
+// No-op swapping impl for unit types
 impl SwapBytes for () {
     fn swap_bytes_mut(&mut self) {}
 }
 
+// No-op swapping impl for bool types so they don't need to be ignored
 impl SwapBytes for bool {
     fn swap_bytes_mut(&mut self) {}
 }

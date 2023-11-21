@@ -1,6 +1,6 @@
 [package]
 name = "swapbytes-derive"
-version = "0.1.1"
+version = "0.2.0"
 description = "Derive macros for working with the swapbytes crate"
 
 edition.workspace = true
