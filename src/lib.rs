@@ -33,6 +33,20 @@ impl SwapBytes for bool {
     fn swap_bytes_mut(&mut self) {}
 }
 
+impl<T> SwapBytes for *const T {
+    fn swap_bytes_mut(&mut self) {
+        let ptr: usize = (*self as usize).swap_bytes();
+        *self = ptr as *const T
+    }
+}
+
+impl<T> SwapBytes for *mut T {
+    fn swap_bytes_mut(&mut self) {
+        let ptr: usize = (*self as usize).swap_bytes();
+        *self = ptr as *mut T
+    }
+}
+
 impl SwapBytes for f32 {
     fn swap_bytes_mut(&mut self) {
         let mut bytes: [u8; 4] = self.to_ne_bytes();
