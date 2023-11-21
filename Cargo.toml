@@ -10,7 +10,7 @@ readme = "README.md"
 
 [package]
 name = "swapbytes"
-version = "0.1.0"
+version = "0.1.1"
 description = "Crate for swapping the endianess of structures"
 
 edition.workspace = true
